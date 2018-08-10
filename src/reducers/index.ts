@@ -31,3 +31,4 @@ export const metaReducers: MetaReducer<State>[] = [logger, storeFreeze];
 export const getAppState = createFeatureSelector<fromApp.State>('app');
 
 export const getQanta = createSelector(getAppState, fromApp.getQanta);
+export const getHealth = createSelector(getAppState, fromApp.getHealth);

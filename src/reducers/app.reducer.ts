@@ -2,6 +2,7 @@ import { AppActions, AppActionsUnion } from '../actions/app.actions';
 
 export interface State {
   qanta: { [key: string]: number };
+  health: number;
 }
 
 export const initialState = {
@@ -19,6 +20,7 @@ export const initialState = {
     Time: 0,
     Light: 0,
   },
+  health: 100,
 };
 
 export function reducer(state: State = initialState, action: AppActionsUnion) {
@@ -27,6 +29,12 @@ export function reducer(state: State = initialState, action: AppActionsUnion) {
       return {
         ...state,
         qanta: { ...state.qanta, [action.payload.type]: action.payload.value },
+      };
+
+    case AppActions.UpdateHealth:
+      return {
+        ...state,
+        health: action.payload,
       };
 
     case AppActions.AddRandomQanta: {
@@ -38,12 +46,16 @@ export function reducer(state: State = initialState, action: AppActionsUnion) {
       return { ...state, qanta };
     }
 
+    case AppActions.Restart:
+      return initialState;
+
     default:
       return state;
   }
 }
 
 export const getQanta = (state: State) => state.qanta;
+export const getHealth = (state: State) => state.health;
 
 const QANTA_ARR = [
   'Dark',

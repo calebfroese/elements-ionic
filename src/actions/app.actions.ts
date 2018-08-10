@@ -4,6 +4,7 @@ export enum AppActions {
   Restart = '[App] Restart',
   UpdateQanta = '[App] UpdateQanta',
   AddRandomQanta = '[App] AddRandomQanta',
+  UpdateHealth = '[App] UpdateHealth',
 }
 
 export class Restart implements Action {
@@ -17,5 +18,13 @@ export class AddRandomQanta implements Action {
   readonly type = AppActions.AddRandomQanta;
   constructor(public payload: number) {}
 }
+export class UpdateHealth implements Action {
+  readonly type = AppActions.UpdateHealth;
+  constructor(public payload: number) {}
+}
 
-export type AppActionsUnion = Restart | UpdateQanta | AddRandomQanta;
+export type AppActionsUnion =
+  | Restart
+  | UpdateQanta
+  | AddRandomQanta
+  | UpdateHealth;

@@ -3,6 +3,12 @@
     <ion-title>
       Elements The Game
     </ion-title>
+
+    <ion-buttons end>
+      <button ion-button (click)="restartGame()">
+        Restart
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
@@ -94,5 +100,9 @@
     </ion-row>
   </ion-grid>
 
-  <button ion-button full (click)="addRandomQanta()">Add Random Qanta</button>
+  <button ion-button full outline (click)="addRandomQanta()">Add Random Qanta</button>
+
+  <ion-footer>
+    <button *ngIf="health$ | async as health" ion-button full (click)="updateHealth(health)">HP: {{ health }}</button>
+  </ion-footer>
 </ion-content>
