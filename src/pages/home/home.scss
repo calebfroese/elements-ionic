@@ -28,3 +28,18 @@ ion-col {
     }
   }
 }
+
+.healthbar {
+  background: green;
+  z-index: -1;
+  opacity: 0.8;
+  height: 10px;
+  display: block;
+  div {
+    position: relative;
+    display: block;
+    background: red;
+    height: 100%;
+    float: right;
+  }
+}

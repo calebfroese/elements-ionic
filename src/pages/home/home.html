@@ -1,5 +1,8 @@
-<ion-header>
-  <button full *ngIf="health$ | async as health" ion-button full (click)="updateHealth()">HP: {{ health }}</button>
+<ion-header no-padding *ngIf="health$ | async as health">
+  <button no-margin full ion-button full (click)="updateHealth()">HP: {{ health }}</button>
+  <div class="healthbar">
+    <div [ngStyle]="{width: 100 - health + '%'}"></div>
+  </div>
 </ion-header>
 
 <ion-content padding>
@@ -11,8 +14,8 @@
           <div>Dark</div>
         </div>
         <div class="buttons">
-          <button color="danger" (click)="remove('Dark')" ion-button>-</button>
-          <button color="primary" (click)="add('Dark')" ion-button>+</button>
+          <button no-margin color="danger" (click)="remove('Dark')" ion-button>-</button>
+          <button no-margin color="primary" (click)="add('Dark')" ion-button>+</button>
         </div>
         <img src="/assets/imgs/elements/Dark.jpg" />
       </ion-col>
@@ -22,8 +25,8 @@
           <div>Water</div>
         </div>
         <div class="buttons">
-          <button color="danger" (click)="remove('Water')" ion-button>-</button>
-          <button color="primary" (click)="add('Water')" ion-button>+</button>
+          <button no-margin color="danger" (click)="remove('Water')" ion-button>-</button>
+          <button no-margin color="primary" (click)="add('Water')" ion-button>+</button>
         </div>
         <img src="/assets/imgs/elements/Water.jpg" />
       </ion-col>
@@ -35,8 +38,8 @@
           <div>Death</div>
         </div>
         <div class="buttons">
-          <button color="danger" (click)="remove('Death')" ion-button>-</button>
-          <button color="primary" (click)="add('Death')" ion-button>+</button>
+          <button no-margin color="danger" (click)="remove('Death')" ion-button>-</button>
+          <button no-margin color="primary" (click)="add('Death')" ion-button>+</button>
         </div>
         <img src="/assets/imgs/elements/Death.jpg" />
       </ion-col>
@@ -46,8 +49,8 @@
           <div>Life</div>
         </div>
         <div class="buttons">
-          <button color="danger" (click)="remove('Life')" ion-button>-</button>
-          <button color="primary" (click)="add('Life')" ion-button>+</button>
+          <button no-margin color="danger" (click)="remove('Life')" ion-button>-</button>
+          <button no-margin color="primary" (click)="add('Life')" ion-button>+</button>
         </div>
         <img src="/assets/imgs/elements/Life.jpg" />
       </ion-col>
@@ -59,8 +62,8 @@
           <div>Earth</div>
         </div>
         <div class="buttons">
-          <button color="danger" (click)="remove('Earth')" ion-button>-</button>
-          <button color="primary" (click)="add('Earth')" ion-button>+</button>
+          <button no-margin color="danger" (click)="remove('Earth')" ion-button>-</button>
+          <button no-margin color="primary" (click)="add('Earth')" ion-button>+</button>
         </div>
         <img src="/assets/imgs/elements/Earth.jpg" />
       </ion-col>
@@ -70,8 +73,8 @@
           <div>Aether</div>
         </div>
         <div class="buttons">
-          <button color="danger" (click)="remove('Aether')" ion-button>-</button>
-          <button color="primary" (click)="add('Aether')" ion-button>+</button>
+          <button no-margin color="danger" (click)="remove('Aether')" ion-button>-</button>
+          <button no-margin color="primary" (click)="add('Aether')" ion-button>+</button>
         </div>
         <img src="/assets/imgs/elements/Aether.jpg" />
       </ion-col>
@@ -83,8 +86,8 @@
           <div>Fire</div>
         </div>
         <div class="buttons">
-          <button color="danger" (click)="remove('Fire')" ion-button>-</button>
-          <button color="primary" (click)="add('Fire')" ion-button>+</button>
+          <button no-margin color="danger" (click)="remove('Fire')" ion-button>-</button>
+          <button no-margin color="primary" (click)="add('Fire')" ion-button>+</button>
         </div>
         <img src="/assets/imgs/elements/Fire.jpg" />
       </ion-col>
@@ -94,8 +97,8 @@
           <div>Air</div>
         </div>
         <div class="buttons">
-          <button color="danger" (click)="remove('Air')" ion-button>-</button>
-          <button color="primary" (click)="add('Air')" ion-button>+</button>
+          <button no-margin color="danger" (click)="remove('Air')" ion-button>-</button>
+          <button no-margin color="primary" (click)="add('Air')" ion-button>+</button>
         </div>
         <img src="/assets/imgs/elements/Air.jpg" />
       </ion-col>
@@ -107,8 +110,8 @@
           <div>Gravity</div>
         </div>
         <div class="buttons">
-          <button color="danger" (click)="remove('Gravity')" ion-button>-</button>
-          <button color="primary" (click)="add('Gravity')" ion-button>+</button>
+          <button no-margin color="danger" (click)="remove('Gravity')" ion-button>-</button>
+          <button no-margin color="primary" (click)="add('Gravity')" ion-button>+</button>
         </div>
         <img src="/assets/imgs/elements/Gravity.jpg" />
       </ion-col>
@@ -118,8 +121,8 @@
           <div>Entropy</div>
         </div>
         <div class="buttons">
-          <button color="danger" (click)="remove('Entropy')" ion-button>-</button>
-          <button color="primary" (click)="add('Entropy')" ion-button>+</button>
+          <button no-margin color="danger" (click)="remove('Entropy')" ion-button>-</button>
+          <button no-margin color="primary" (click)="add('Entropy')" ion-button>+</button>
         </div>
         <img src="/assets/imgs/elements/Entropy.jpg" />
       </ion-col>
@@ -131,8 +134,8 @@
           <div>Time</div>
         </div>
         <div class="buttons">
-          <button color="danger" (click)="remove('Time')" ion-button>-</button>
-          <button color="primary" (click)="add('Time')" ion-button>+</button>
+          <button no-margin color="danger" (click)="remove('Time')" ion-button>-</button>
+          <button no-margin color="primary" (click)="add('Time')" ion-button>+</button>
         </div>
         <img src="/assets/imgs/elements/Time.jpg" />
       </ion-col>
@@ -142,8 +145,8 @@
           <div>Light</div>
         </div>
         <div class="buttons">
-          <button color="danger" (click)="remove('Light')" ion-button>-</button>
-          <button color="primary" (click)="add('Light')" ion-button>+</button>
+          <button no-margin color="danger" (click)="remove('Light')" ion-button>-</button>
+          <button no-margin color="primary" (click)="add('Light')" ion-button>+</button>
         </div>
         <img src="/assets/imgs/elements/Light.jpg" />
       </ion-col>
