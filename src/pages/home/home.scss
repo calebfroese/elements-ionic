@@ -1,13 +1,23 @@
 ion-col {
   display: flex;
+  flex-direction: column;
   padding: 20px;
-  & span:nth-child(1) {
-      flex: 20;
-  }
-  & span:nth-child(2) {
-      flex: 80;
-  }
   img {
-      width: 28px;
+    width: 28px;
+    height: 28px;
+  }
+  .element-details {
+    display: flex;
+    justify-content: space-between;
+    span {
+      display: flex;
+      flex: 20;
+    }
+  }
+  .buttons {
+    display: flex;
+    button {
+      flex: 50;
+    }
   }
 }

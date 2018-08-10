@@ -4,10 +4,11 @@ import { AlertController } from 'ionic-angular';
 import { Observable } from 'rxjs/Observable';
 
 import {
+  AddQanta,
   AddRandomQanta,
+  RemoveQanta,
   Restart,
   UpdateHealth,
-  UpdateQanta,
 } from '../../actions/app.actions';
 import { getHealth, getQanta } from '../../reducers';
 
@@ -59,35 +60,12 @@ export class HomePage implements OnInit {
       .present();
   }
 
-  updateQanta(type: string, value: string) {
-    this.alertCtrl
-      .create({
-        title: type,
-        inputs: [
-          {
-            name: 'amount',
-            type: 'number',
-            min: '0',
-            max: '75',
-            value: value,
-          },
-        ],
-        buttons: [
-          {
-            text: 'Cancel',
-            role: 'cancel',
-          },
-          {
-            text: 'Update',
-            handler: ({ amount }: any) => {
-              this.store.dispatch(
-                new UpdateQanta({ type, value: parseInt(amount) }),
-              );
-            },
-          },
-        ],
-      })
-      .present();
+  add(type: string) {
+    this.store.dispatch(new AddQanta(type));
+  }
+
+  remove(type: string) {
+    this.store.dispatch(new RemoveQanta(type));
   }
 
   addRandomQanta() {

@@ -25,11 +25,27 @@ export const initialState = {
 
 export function reducer(state: State = initialState, action: AppActionsUnion) {
   switch (action.type) {
-    case AppActions.UpdateQanta:
+    case AppActions.AddQanta: {
+      if (state.qanta[action.payload] === 75) return state;
       return {
         ...state,
-        qanta: { ...state.qanta, [action.payload.type]: action.payload.value },
+        qanta: {
+          ...state.qanta,
+          [action.payload]: state.qanta[action.payload] + 1,
+        },
       };
+    }
+
+    case AppActions.RemoveQanta: {
+      if (state.qanta[action.payload] === 0) return state;
+      return {
+        ...state,
+        qanta: {
+          ...state.qanta,
+          [action.payload]: state.qanta[action.payload] - 1,
+        },
+      };
+    }
 
     case AppActions.UpdateHealth:
       return {

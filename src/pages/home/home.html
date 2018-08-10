@@ -1,120 +1,153 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Elements The Game
-    </ion-title>
-
-    <ion-buttons end>
-      <button ion-button (click)="restartGame()">
-        Restart
-      </button>
-    </ion-buttons>
-  </ion-navbar>
-</ion-header>
-
 <ion-content padding>
   <ion-grid *ngIf="qanta$ | async as qanta">
     <ion-row>
       <ion-col>
-        <button ion-button full outline (click)="updateQanta('Dark', qanta['Dark'])">
+        <div class="element-details">
           <span>{{ qanta['Dark'] }}</span>
           <span>Dark</span>
           <img src="/assets/imgs/elements/Dark.jpg" />
-        </button>
+        </div>
+        <div class="buttons">
+          <button color="danger" (click)="remove('Dark')" ion-button>-</button>
+          <button color="primary" (click)="add('Dark')" ion-button>+</button>
+        </div>
       </ion-col>
       <ion-col>
-        <button ion-button full outline (click)="updateQanta('Water', qanta['Water'])">
+        <div class="element-details">
           <span>{{ qanta['Water'] }}</span>
           <span>Water</span>
           <img src="/assets/imgs/elements/Water.jpg" />
-        </button>
+        </div>
+        <div class="buttons">
+          <button color="danger" (click)="remove('Water')" ion-button>-</button>
+          <button color="primary" (click)="add('Water')" ion-button>+</button>
+        </div>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col>
-        <button ion-button full outline (click)="updateQanta('Death', qanta['Death'])">
+        <div class="element-details">
           <span>{{ qanta['Death'] }}</span>
           <span>Death</span>
           <img src="/assets/imgs/elements/Death.jpg" />
-        </button>
+        </div>
+        <div class="buttons">
+          <button color="danger" (click)="remove('Death')" ion-button>-</button>
+          <button color="primary" (click)="add('Death')" ion-button>+</button>
+        </div>
       </ion-col>
       <ion-col>
-        <button ion-button full outline (click)="updateQanta('Life', qanta['Life'])">
+        <div class="element-details">
           <span>{{ qanta['Life'] }}</span>
           <span>Life</span>
           <img src="/assets/imgs/elements/Life.jpg" />
-        </button>
+        </div>
+        <div class="buttons">
+          <button color="danger" (click)="remove('Life')" ion-button>-</button>
+          <button color="primary" (click)="add('Life')" ion-button>+</button>
+        </div>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col>
-        <button ion-button full outline (click)="updateQanta('Earth', qanta['Earth'])">
+        <div class="element-details">
           <span>{{ qanta['Earth'] }}</span>
           <span>Earth</span>
           <img src="/assets/imgs/elements/Earth.jpg" />
-        </button>
+        </div>
+        <div class="buttons">
+          <button color="danger" (click)="remove('Earth')" ion-button>-</button>
+          <button color="primary" (click)="add('Earth')" ion-button>+</button>
+        </div>
       </ion-col>
       <ion-col>
-        <button ion-button full outline (click)="updateQanta('Aether', qanta['Aether'])">
+        <div class="element-details">
           <span>{{ qanta['Aether'] }}</span>
           <span>Aether</span>
           <img src="/assets/imgs/elements/Aether.jpg" />
-        </button>
+        </div>
+        <div class="buttons">
+          <button color="danger" (click)="remove('Aether')" ion-button>-</button>
+          <button color="primary" (click)="add('Aether')" ion-button>+</button>
+        </div>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col>
-        <button ion-button full outline (click)="updateQanta('Fire', qanta['Fire'])">
+        <div class="element-details">
           <span>{{ qanta['Fire'] }}</span>
           <span>Fire</span>
           <img src="/assets/imgs/elements/Fire.jpg" />
-        </button>
+        </div>
+        <div class="buttons">
+          <button color="danger" (click)="remove('Fire')" ion-button>-</button>
+          <button color="primary" (click)="add('Fire')" ion-button>+</button>
+        </div>
       </ion-col>
       <ion-col>
-        <button ion-button full outline (click)="updateQanta('Air', qanta['Air'])">
+        <div class="element-details">
           <span>{{ qanta['Air'] }}</span>
           <span>Air</span>
           <img src="/assets/imgs/elements/Air.jpg" />
-        </button>
+        </div>
+        <div class="buttons">
+          <button color="danger" (click)="remove('Air')" ion-button>-</button>
+          <button color="primary" (click)="add('Air')" ion-button>+</button>
+        </div>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col>
-        <button ion-button full outline (click)="updateQanta('Gravity', qanta['Gravity'])">
+        <div class="element-details">
           <span>{{ qanta['Gravity'] }}</span>
           <span>Gravity</span>
           <img src="/assets/imgs/elements/Gravity.jpg" />
-        </button>
+        </div>
+        <div class="buttons">
+          <button color="danger" (click)="remove('Gravity')" ion-button>-</button>
+          <button color="primary" (click)="add('Gravity')" ion-button>+</button>
+        </div>
       </ion-col>
       <ion-col>
-        <button ion-button full outline (click)="updateQanta('Entropy', qanta['Entropy'])">
+        <div class="element-details">
           <span>{{ qanta['Entropy'] }}</span>
           <span>Entropy</span>
           <img src="/assets/imgs/elements/Entropy.jpg" />
-        </button>
+        </div>
+        <div class="buttons">
+          <button color="danger" (click)="remove('Entropy')" ion-button>-</button>
+          <button color="primary" (click)="add('Entropy')" ion-button>+</button>
+        </div>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col>
-        <button ion-button full outline (click)="updateQanta('Time', qanta['Time'])">
+        <div class="element-details">
           <span>{{ qanta['Time'] }}</span>
           <span>Time</span>
           <img src="/assets/imgs/elements/Time.jpg" />
-        </button>
+        </div>
+        <div class="buttons">
+          <button color="danger" (click)="remove('Time')" ion-button>-</button>
+          <button color="primary" (click)="add('Time')" ion-button>+</button>
+        </div>
       </ion-col>
       <ion-col>
-        <button ion-button full outline (click)="updateQanta('Light', qanta['Light'])">
+        <div class="element-details">
           <span>{{ qanta['Light'] }}</span>
           <span>Light</span>
           <img src="/assets/imgs/elements/Light.jpg" />
-        </button>
+        </div>
+        <div class="buttons">
+          <button color="danger" (click)="remove('Light')" ion-button>-</button>
+          <button color="primary" (click)="add('Light')" ion-button>+</button>
+        </div>
       </ion-col>
     </ion-row>
   </ion-grid>
 
-  <button ion-button full outline (click)="addRandomQanta()">Add Random Qanta</button>
-
-  <ion-footer>
-    <button *ngIf="health$ | async as health" ion-button full (click)="updateHealth(health)">HP: {{ health }}</button>
-  </ion-footer>
 </ion-content>
+
+<ion-footer>
+  <button full outline *ngIf="health$ | async as health" ion-button full (click)="updateHealth(health)">HP: {{ health }}</button>
+</ion-footer>
