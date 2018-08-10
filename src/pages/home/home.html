@@ -1,7 +1,7 @@
 <ion-header no-padding *ngIf="health$ | async as health; else game">
   <button no-margin full ion-button full (click)="updateHealth()">HP: {{ health }}</button>
   <div class="healthbar">
-    <div [ngStyle]="{width: 100 - health + '%'}"></div>
+    <div [ngStyle]="{width: health <= 100 ? 100 - health + '%' : '0%'}"></div>
   </div>
 </ion-header>
 
