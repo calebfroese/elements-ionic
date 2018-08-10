@@ -41,18 +41,19 @@ export class HomePage implements OnInit {
             type: 'number',
             min: '0',
             max: '100',
-            value: health,
           },
         ],
         buttons: [
           {
-            text: 'Cancel',
-            role: 'cancel',
+            text: 'Add',
+            handler: ({ amount }: any) => {
+              this.store.dispatch(new UpdateHealth(parseInt(amount || 0)));
+            },
           },
           {
-            text: 'Update',
+            text: 'Subtract',
             handler: ({ amount }: any) => {
-              this.store.dispatch(new UpdateHealth(parseInt(amount)));
+              this.store.dispatch(new UpdateHealth(-parseInt(amount || 0)));
             },
           },
         ],

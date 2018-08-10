@@ -50,7 +50,7 @@ export function reducer(state: State = initialState, action: AppActionsUnion) {
     case AppActions.UpdateHealth:
       return {
         ...state,
-        health: action.payload,
+        health: state.health + action.payload,
       };
 
     case AppActions.AddRandomQanta: {

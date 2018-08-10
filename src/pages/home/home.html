@@ -1,3 +1,7 @@
+<ion-header>
+  <button full *ngIf="health$ | async as health" ion-button full (click)="updateHealth(health)">HP: {{ health }}</button>
+</ion-header>
+
 <ion-content padding>
   <ion-grid *ngIf="qanta$ | async as qanta">
     <ion-row>
@@ -148,7 +152,3 @@
 
   <button full outline ion-button (click)="addRandomQanta()">Add Random Qanta</button>
 </ion-content>
-
-<ion-footer>
-  <button full *ngIf="health$ | async as health" ion-button full (click)="updateHealth(health)">HP: {{ health }}</button>
-</ion-footer>
