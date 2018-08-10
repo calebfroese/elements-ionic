@@ -57,7 +57,7 @@ export function reducer(state: State = initialState, action: AppActionsUnion) {
       let qanta = { ...state.qanta };
       for (let i = 0; i < action.payload; i++) {
         const toAdd = QANTA_ARR[Math.floor(Math.random() * QANTA_ARR.length)];
-        qanta[toAdd]++;
+        if (qanta[toAdd] < 75) qanta[toAdd]++;
       }
       return { ...state, qanta };
     }
