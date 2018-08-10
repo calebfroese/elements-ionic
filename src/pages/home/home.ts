@@ -31,7 +31,7 @@ export class HomePage implements OnInit {
     this.store.dispatch(new Restart());
   }
 
-  updateHealth(health: string) {
+  updateHealth() {
     this.alertCtrl
       .create({
         title: 'Update Health',

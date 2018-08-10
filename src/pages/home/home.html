@@ -1,5 +1,5 @@
 <ion-header>
-  <button full *ngIf="health$ | async as health" ion-button full (click)="updateHealth(health)">HP: {{ health }}</button>
+  <button full *ngIf="health$ | async as health" ion-button full (click)="updateHealth()">HP: {{ health }}</button>
 </ion-header>
 
 <ion-content padding>
