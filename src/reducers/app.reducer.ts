@@ -1,4 +1,4 @@
-import { AppActionsUnion } from '../actions/app.actions';
+import { AppActionsUnion, AppActions } from '../actions/app.actions';
 
 export interface State {
   qanta: { [key: string]: number };
@@ -23,6 +23,12 @@ export const initialState = {
 
 export function reducer(state: State = initialState, action: AppActionsUnion) {
   switch (action.type) {
+    case AppActions.UpdateQanta:
+      return {
+        ...state,
+        qanta: { ...state.qanta, [action.payload.type]: action.payload.value },
+      };
+
     default:
       return state;
   }

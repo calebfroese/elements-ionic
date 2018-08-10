@@ -10,62 +10,86 @@
   <ion-grid *ngIf="qanta$ | async as qanta">
     <ion-row>
       <ion-col>
+        <button ion-button full outline (click)="updateQanta('Dark', qanta['Dark'])">
         <span>{{ qanta['Dark'] }}</span>
         <span>Dark</span>
+        </button>
       </ion-col>
       <ion-col>
+        <button ion-button full outline (click)="updateQanta('Water', qanta['Water'])">
         <span>{{ qanta['Water'] }}</span>
         <span>Water</span>
+        </button>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col>
+        <button ion-button full outline (click)="updateQanta('Death', qanta['Death'])">
         <span>{{ qanta['Death'] }}</span>
         <span>Death</span>
+        </button>
       </ion-col>
       <ion-col>
+        <button ion-button full outline (click)="updateQanta('Life', qanta['Life'])">
         <span>{{ qanta['Life'] }}</span>
         <span>Life</span>
+        </button>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col>
+        <button ion-button full outline (click)="updateQanta('Earth', qanta['Earth'])">
         <span>{{ qanta['Earth'] }}</span>
         <span>Earth</span>
+        </button>
       </ion-col>
       <ion-col>
+        <button ion-button full outline (click)="updateQanta('Aether', qanta['Aether'])">
         <span>{{ qanta['Aether'] }}</span>
         <span>Aether</span>
+        </button>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col>
+        <button ion-button full outline (click)="updateQanta('Fire', qanta['Fire'])">
         <span>{{ qanta['Fire'] }}</span>
         <span>Fire</span>
+        </button>
       </ion-col>
       <ion-col>
+        <button ion-button full outline (click)="updateQanta('Air', qanta['Air'])">
         <span>{{ qanta['Air'] }}</span>
         <span>Air</span>
+        </button>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col>
+        <button ion-button full outline (click)="updateQanta('Gravity', qanta['Gravity'])">
         <span>{{ qanta['Gravity'] }}</span>
         <span>Gravity</span>
+        </button>
       </ion-col>
       <ion-col>
+        <button ion-button full outline (click)="updateQanta('Entropy', qanta['Entropy'])">
         <span>{{ qanta['Entropy'] }}</span>
         <span>Entropy</span>
+        </button>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col>
+        <button ion-button full outline (click)="updateQanta('Time', qanta['Time'])">
         <span>{{ qanta['Time'] }}</span>
         <span>Time</span>
+        </button>
       </ion-col>
       <ion-col>
+        <button ion-button full outline (click)="updateQanta('Light', qanta['Light'])">
         <span>{{ qanta['Light'] }}</span>
         <span>Light</span>
+        </button>
       </ion-col>
     </ion-row>
   </ion-grid>
