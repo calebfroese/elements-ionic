@@ -2,16 +2,23 @@ ion-col {
   display: flex;
   flex-direction: column;
   padding: 20px;
+  position: relative;
   img {
-    width: 28px;
-    height: 28px;
+    position: absolute;
+    z-index: -1;
+    $width: 40px;
+    left: calc(50% - 20px);
+    top: 0;
+    width: $width;
+    height: $width;
   }
   .element-details {
     display: flex;
     justify-content: space-between;
-    span {
-      display: flex;
-      flex: 20;
+    div {
+      flex: 50%;
+      text-align: center;
+      width: 100%;
     }
   }
   .buttons {
