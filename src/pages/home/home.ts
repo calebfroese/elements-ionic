@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { AlertController } from 'ionic-angular';
 import { Observable } from 'rxjs/Observable';
+
+import { AddRandomQanta, UpdateQanta } from '../../actions/app.actions';
 import { getQanta } from '../../reducers';
-import { UpdateQanta } from '../../actions/app.actions';
 
 @Component({
   selector: 'page-home',
@@ -47,5 +48,9 @@ export class HomePage implements OnInit {
         ],
       })
       .present();
+  }
+
+  addRandomQanta() {
+    this.store.dispatch(new AddRandomQanta(3));
   }
 }

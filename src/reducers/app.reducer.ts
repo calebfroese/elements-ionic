@@ -1,4 +1,4 @@
-import { AppActionsUnion, AppActions } from '../actions/app.actions';
+import { AppActions, AppActionsUnion } from '../actions/app.actions';
 
 export interface State {
   qanta: { [key: string]: number };
@@ -29,9 +29,33 @@ export function reducer(state: State = initialState, action: AppActionsUnion) {
         qanta: { ...state.qanta, [action.payload.type]: action.payload.value },
       };
 
+    case AppActions.AddRandomQanta: {
+      let qanta = { ...state.qanta };
+      for (let i = 0; i < action.payload; i++) {
+        const toAdd = QANTA_ARR[Math.floor(Math.random() * QANTA_ARR.length)];
+        qanta[toAdd]++;
+      }
+      return { ...state, qanta };
+    }
+
     default:
       return state;
   }
 }
 
 export const getQanta = (state: State) => state.qanta;
+
+const QANTA_ARR = [
+  'Dark',
+  'Water',
+  'Death',
+  'Life',
+  'Earth',
+  'Aether',
+  'Fire',
+  'Air',
+  'Gravity',
+  'Entropy',
+  'Time',
+  'Light',
+];
