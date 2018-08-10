@@ -47,11 +47,15 @@ export function reducer(state: State = initialState, action: AppActionsUnion) {
       };
     }
 
-    case AppActions.UpdateHealth:
+    case AppActions.UpdateHealth: {
+      let health = state.health + action.payload;
+      if (health > 500) health = 500;
+      if (health < 0) health = 0;
       return {
         ...state,
-        health: state.health + action.payload,
+        health,
       };
+    }
 
     case AppActions.AddRandomQanta: {
       let qanta = { ...state.qanta };
