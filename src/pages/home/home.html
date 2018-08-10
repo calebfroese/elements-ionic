@@ -7,30 +7,66 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-grid>
+  <ion-grid *ngIf="qanta$ | async as qanta">
     <ion-row>
-      <ion-col>Dark</ion-col>
-      <ion-col>Water</ion-col>
+      <ion-col>
+        <span>{{ qanta['Dark'] }}</span>
+        <span>Dark</span>
+      </ion-col>
+      <ion-col>
+        <span>{{ qanta['Water'] }}</span>
+        <span>Water</span>
+      </ion-col>
     </ion-row>
     <ion-row>
-      <ion-col>Death</ion-col>
-      <ion-col>Life</ion-col>
+      <ion-col>
+        <span>{{ qanta['Death'] }}</span>
+        <span>Death</span>
+      </ion-col>
+      <ion-col>
+        <span>{{ qanta['Life'] }}</span>
+        <span>Life</span>
+      </ion-col>
     </ion-row>
     <ion-row>
-      <ion-col>Earth</ion-col>
-      <ion-col>Aether</ion-col>
+      <ion-col>
+        <span>{{ qanta['Earth'] }}</span>
+        <span>Earth</span>
+      </ion-col>
+      <ion-col>
+        <span>{{ qanta['Aether'] }}</span>
+        <span>Aether</span>
+      </ion-col>
     </ion-row>
     <ion-row>
-      <ion-col>Fire</ion-col>
-      <ion-col>Air</ion-col>
+      <ion-col>
+        <span>{{ qanta['Fire'] }}</span>
+        <span>Fire</span>
+      </ion-col>
+      <ion-col>
+        <span>{{ qanta['Air'] }}</span>
+        <span>Air</span>
+      </ion-col>
     </ion-row>
     <ion-row>
-      <ion-col>Gravity</ion-col>
-      <ion-col>Entropy</ion-col>
+      <ion-col>
+        <span>{{ qanta['Gravity'] }}</span>
+        <span>Gravity</span>
+      </ion-col>
+      <ion-col>
+        <span>{{ qanta['Entropy'] }}</span>
+        <span>Entropy</span>
+      </ion-col>
     </ion-row>
     <ion-row>
-      <ion-col>Time</ion-col>
-      <ion-col>Light</ion-col>
+      <ion-col>
+        <span>{{ qanta['Time'] }}</span>
+        <span>Time</span>
+      </ion-col>
+      <ion-col>
+        <span>{{ qanta['Light'] }}</span>
+        <span>Light</span>
+      </ion-col>
     </ion-row>
   </ion-grid>
 </ion-content>
