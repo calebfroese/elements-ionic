@@ -22,6 +22,8 @@ $app-direction: ltr;
 // To view all the possible Ionic variables, see:
 // http://ionicframework.com/docs/theming/overriding-ionic-variables/
 
+$background-color: #331100 !default;
+$text-color: #fff !default;
 
 // Named Color Variables
 // --------------------------------------------------
@@ -32,7 +34,7 @@ $app-direction: ltr;
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #488aff,
+  primary:    rgb(184, 184, 184),
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
@@ -44,7 +46,8 @@ $colors: (
 // --------------------------------------------------
 // iOS only Sass variables can go here
 
-
+$button-ios-clear-border-color: rgb(233, 185, 100);
+$button-ios-outline-border-color: rgb(233, 185, 100);
 
 
 // App Material Design Variables

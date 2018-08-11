@@ -1,6 +1,6 @@
 <ion-content padding>
   <ng-container *ngIf="health$ | async as health; else game">
-    <button no-margin full ion-button full (click)="updateHealth()">HP: {{ health }}</button>
+    <button no-margin ion-button full outline (click)="updateHealth()">HP: {{ health }}</button>
     <div class="healthbar">
       <div [ngStyle]="{width: health <= 100 ? 100 - health + '%' : '0%'}"></div>
     </div>
@@ -17,8 +17,8 @@
           <div>Dark</div>
         </div>
         <div class="buttons">
-          <button no-margin color="danger" (click)="remove('Dark')" ion-button>-</button>
-          <button no-margin color="primary" (click)="add('Dark')" ion-button>+</button>
+          <button outline (click)="remove('Dark')" ion-button>-</button>
+          <button outline (click)="add('Dark')" ion-button>+</button>
         </div>
         <img src="/assets/imgs/elements/Dark.jpg" />
       </ion-col>
@@ -28,8 +28,8 @@
           <div>Water</div>
         </div>
         <div class="buttons">
-          <button no-margin color="danger" (click)="remove('Water')" ion-button>-</button>
-          <button no-margin color="primary" (click)="add('Water')" ion-button>+</button>
+          <button outline (click)="remove('Water')" ion-button>-</button>
+          <button outline (click)="add('Water')" ion-button>+</button>
         </div>
         <img src="/assets/imgs/elements/Water.jpg" />
       </ion-col>
@@ -41,8 +41,8 @@
           <div>Death</div>
         </div>
         <div class="buttons">
-          <button no-margin color="danger" (click)="remove('Death')" ion-button>-</button>
-          <button no-margin color="primary" (click)="add('Death')" ion-button>+</button>
+          <button outline (click)="remove('Death')" ion-button>-</button>
+          <button outline (click)="add('Death')" ion-button>+</button>
         </div>
         <img src="/assets/imgs/elements/Death.jpg" />
       </ion-col>
@@ -52,8 +52,8 @@
           <div>Life</div>
         </div>
         <div class="buttons">
-          <button no-margin color="danger" (click)="remove('Life')" ion-button>-</button>
-          <button no-margin color="primary" (click)="add('Life')" ion-button>+</button>
+          <button outline (click)="remove('Life')" ion-button>-</button>
+          <button outline (click)="add('Life')" ion-button>+</button>
         </div>
         <img src="/assets/imgs/elements/Life.jpg" />
       </ion-col>
@@ -65,8 +65,8 @@
           <div>Earth</div>
         </div>
         <div class="buttons">
-          <button no-margin color="danger" (click)="remove('Earth')" ion-button>-</button>
-          <button no-margin color="primary" (click)="add('Earth')" ion-button>+</button>
+          <button outline (click)="remove('Earth')" ion-button>-</button>
+          <button outline (click)="add('Earth')" ion-button>+</button>
         </div>
         <img src="/assets/imgs/elements/Earth.jpg" />
       </ion-col>
@@ -76,8 +76,8 @@
           <div>Aether</div>
         </div>
         <div class="buttons">
-          <button no-margin color="danger" (click)="remove('Aether')" ion-button>-</button>
-          <button no-margin color="primary" (click)="add('Aether')" ion-button>+</button>
+          <button outline (click)="remove('Aether')" ion-button>-</button>
+          <button outline (click)="add('Aether')" ion-button>+</button>
         </div>
         <img src="/assets/imgs/elements/Aether.jpg" />
       </ion-col>
@@ -89,8 +89,8 @@
           <div>Fire</div>
         </div>
         <div class="buttons">
-          <button no-margin color="danger" (click)="remove('Fire')" ion-button>-</button>
-          <button no-margin color="primary" (click)="add('Fire')" ion-button>+</button>
+          <button outline (click)="remove('Fire')" ion-button>-</button>
+          <button outline (click)="add('Fire')" ion-button>+</button>
         </div>
         <img src="/assets/imgs/elements/Fire.jpg" />
       </ion-col>
@@ -100,8 +100,8 @@
           <div>Air</div>
         </div>
         <div class="buttons">
-          <button no-margin color="danger" (click)="remove('Air')" ion-button>-</button>
-          <button no-margin color="primary" (click)="add('Air')" ion-button>+</button>
+          <button outline (click)="remove('Air')" ion-button>-</button>
+          <button outline (click)="add('Air')" ion-button>+</button>
         </div>
         <img src="/assets/imgs/elements/Air.jpg" />
       </ion-col>
@@ -113,8 +113,8 @@
           <div>Gravity</div>
         </div>
         <div class="buttons">
-          <button no-margin color="danger" (click)="remove('Gravity')" ion-button>-</button>
-          <button no-margin color="primary" (click)="add('Gravity')" ion-button>+</button>
+          <button outline (click)="remove('Gravity')" ion-button>-</button>
+          <button outline (click)="add('Gravity')" ion-button>+</button>
         </div>
         <img src="/assets/imgs/elements/Gravity.jpg" />
       </ion-col>
@@ -124,8 +124,8 @@
           <div>Entropy</div>
         </div>
         <div class="buttons">
-          <button no-margin color="danger" (click)="remove('Entropy')" ion-button>-</button>
-          <button no-margin color="primary" (click)="add('Entropy')" ion-button>+</button>
+          <button outline (click)="remove('Entropy')" ion-button>-</button>
+          <button outline (click)="add('Entropy')" ion-button>+</button>
         </div>
         <img src="/assets/imgs/elements/Entropy.jpg" />
       </ion-col>
@@ -137,8 +137,8 @@
           <div>Time</div>
         </div>
         <div class="buttons">
-          <button no-margin color="danger" (click)="remove('Time')" ion-button>-</button>
-          <button no-margin color="primary" (click)="add('Time')" ion-button>+</button>
+          <button outline (click)="remove('Time')" ion-button>-</button>
+          <button outline (click)="add('Time')" ion-button>+</button>
         </div>
         <img src="/assets/imgs/elements/Time.jpg" />
       </ion-col>
@@ -148,8 +148,8 @@
           <div>Light</div>
         </div>
         <div class="buttons">
-          <button no-margin color="danger" (click)="remove('Light')" ion-button>-</button>
-          <button no-margin color="primary" (click)="add('Light')" ion-button>+</button>
+          <button outline (click)="remove('Light')" ion-button>-</button>
+          <button outline (click)="add('Light')" ion-button>+</button>
         </div>
         <img src="/assets/imgs/elements/Light.jpg" />
       </ion-col>
