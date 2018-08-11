@@ -1,14 +1,19 @@
-<ion-content padding>
-  <ng-container *ngIf="health$ | async as health; else game">
-    <button no-margin ion-button full outline (click)="updateHealth()">HP: {{ health }}</button>
-    <div class="healthbar">
-      <div [ngStyle]="{width: health <= 100 ? 100 - health + '%' : '0%'}"></div>
-    </div>
-  </ng-container>
-  <ng-template #game>
-    <button color="danger" no-margin full ion-button full (click)="restartGame()">Restart</button>
-  </ng-template>
+<ion-header>
+  <ion-toolbar transparent>
+    <img src="/assets/imgs/wood-bg.jpg" />
+    <ng-container *ngIf="health$ | async as health; else game">
+      <button no-margin ion-button full outline (click)="updateHealth()">HP: {{ health }}</button>
+      <div class="healthbar">
+        <div [ngStyle]="{width: health <= 100 ? 100 - health + '%' : '0%'}"></div>
+      </div>
+    </ng-container>
+    <ng-template #game>
+      <button color="danger" no-margin full ion-button full (click)="restartGame()">Restart</button>
+    </ng-template>
+  </ion-toolbar>
+</ion-header>
 
+<ion-content padding>
   <ion-grid *ngIf="qanta$ | async as qanta">
     <ion-row>
       <ion-col>
