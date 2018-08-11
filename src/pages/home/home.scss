@@ -2,13 +2,8 @@ ion-col {
   display: flex;
   flex-direction: column;
   padding: 20px;
-  position: relative;
   img {
-    position: absolute;
-    z-index: -1;
-    $width: 40px;
-    left: calc(50% - 20px);
-    top: 0;
+    $width: 20px;
     width: $width;
     height: $width;
   }
